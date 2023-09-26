@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#gameground{
+				position: relative;
+				width: 1200px;
+				height: 800px;
+				margin: auto;
+				background-color: aliceblue;
+				box-shadow: 0 10px 15px black;
+			}
+			#snake{
+				position: absolute;
+				background-color: red;
+				width: 50px;
+				height: 50px;
+				border-radius: 20px;
+			}
+			.sbody{
+				position: absolute;
+				background-color: blue;
+				width: 50px;
+				height: 50px;
+				border-radius: 20px;
+			}
+			#food{
+				position: absolute;
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+		<script>
+			var snakes=[{x:0,y:0}];
+			var x=0;
+			var y=0;
+			var score=0;
+			var timer;
+			var Direct = 40;
+			//控制移动方向
+			function turnDirect(){
+				Direct = event.keyCode;
+			}
+			
+			function moveSnake(){
+							switch (Direct){
+								case 38:
+								//上
+									y-=50;
+									break;
+								case 40:
+								//下
+									y+=50;
+									break;
+								case 37:
+								//左
+									x-=50;
+									break;
+								case 39:
+								//右
+									x+=50;
+									break;
+								default:
+									break;
+							}
+						// document.getElementById("snake").style=`top:${y}px;left:${x}px;`;
+						
+						bodyMove();
+						headMove();
+						
+						
+						if (isDead()) {
+							alert("GAME OVER")
+							clearTimeout(timer)
+							document.body.onkeydown=null;
+						}
+						
+						if (eatFood()) {
+							growth();
+							console.log("+1:"+ ++score);
+							randomPos();
+						}
+						timer = setTimeout("moveSnake()",500-score*10)
+			}
+			//身体移动（将数组中已经移动好的坐标直接赋值）
+			function bodyMove(){
+				var bodyArr=document.getElementsByClassName("sbody");
+				for (var i = 0; i < bodyArr.length; i++) {
+					bodyArr[i].style.left=snakes[i].x+"px";
+					bodyArr[i].style.top=snakes[i].y+"px";
+				}
+			}
+			//头移动的同时将身体在数组的位置中改变
+			function headMove(){
+				var snake=document.getElementById("snake");
+				snake.style.left=x+"px";
+				snake.style.top=y+"px";
+				snakes.reverse();
+				for (var i = 0; i < snakes.length-1; i++) {
+					snakes[i]=snakes[i+1]
+				}
+				snakes.reverse();
+				snakes[0]={x,y};
+			}
+			
+			
+			function growth(){
+				var sbody=document.createElement("div");//创建元素对象
+				sbody.classList.add("sbody");//设置类型(类型样式已经实现备好)
+				//使用当前食物坐标赋值给新增元素
+				sbody.style.left=x+"px";
+				sbody.style.top=y+"px";
+				sbody.style.backgroundColor=getRandromColorStr();
+				//将元素挂在父容器的子节点中
+				document.getElementById("gameground").append(sbody);
+				
+				snakes.push({x,y});
+			}
+			//当蛇头与身体相撞或碰到边界线时，游戏结束
+			function isDead(){
+				if (x<0||x>1150||y<0||y>750) {
+					return true;
+				} else{
+					for (var i = 1; i < snakes.length; i++) {
+						if (x==snakes[i].x&&y==snakes[i].y) {
+							return true;
+						}
+					}
+					return false;
+				}
+			}
+			var foodx=0;
+			var foody=0;
+			//随机位置生成食物
+			function randomPos(){
+				var food=document.getElementById("food");
+				foodx=Math.floor(Math.random()*1200/50)*50;
+				foody=Math.floor(Math.random()*800/50)*50;
+				food.style.left=foodx+"px";
+				food.style.top=foody+"px";
+				food.style.backgroundColor =getRandromColorStr();
+				//重复刷新到同一位置再次刷走
+				if (eatFood()) {
+					randomPos();
+				}
+			}
+			//生产的食物随机颜色
+			function getRandromColorStr(){
+				var arr="0123456789abcdef";
+				var colorCode="#";
+				for (var i = 0; i < 6; i++) {
+					colorCode+=arr[Math.floor(Math.random()*arr.length)];
+				}
+				return colorCode;
+			}
+			function initPage(){
+				randomPos();
+				moveSnake();
+				snakes[0]={x,y}
+			}
+			//判断是否吃到食物！
+			function eatFood(){
+				var snake=document.getElementById("snake");
+				var food=document.getElementById("food");
+				if (snake.style.top==food.style.top&&snake.style.left==food.style.left) {
+					return true;
+				}else{
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body onload="initPage()" onkeydown="turnDirect()" >
+		<div id="gameground" >
+			<div id="snake"  ></div>
+			<div id="food"  ></div>
+		</div>
+	</body>
+</html>
