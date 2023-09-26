@@ -1,3 +1,50 @@
+JavaScript复习
+# 简介
+## 语言介绍
+### 什么是js？什么时候用？为什么要用？
+## 使用到html
+### 如何将js应用到html页面
+1. 外部引用
+```
+<script src="js/calculator.js"></script>
+```
+
+2. 内嵌
+```
+<script>
+代码
+</script>
+```
+
+3. 行内
+```
+<button onclick="alert('hello')">按钮</button>
+```
+
+# 基本语法
+## 变量
+1. 声明变量 var let*
+2. 初始化
+3. 使用表达式
+4. 输出结果到html
+	1. alert()
+	2. console.log()
+	3. document.write() //dw
+
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+
+## 数据类型
+1. 数值型
+2. 字符型 ES6字符串使用*
+3. 对象
+4. 布尔，null，未定义，……
+
+## 数据类型转换
 1. 自动转换
 ![markdown简单语法表](img/markdown简单语法表.png)
 2. 强制转换
