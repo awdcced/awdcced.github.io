@@ -1,3 +1,16 @@
+---
+title: "标题"
+output:
+  html_document:
+    toc: false
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+---
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+
 <font size=10 color=#F28D8D>Me and my code for those things</font>
 
 # JavaScript 
