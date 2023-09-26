@@ -1,4 +1,4 @@
-JavaScript复习
+JavaScript
 # 简介
 ## 语言介绍
 ### 什么是js？什么时候用？为什么要用？
