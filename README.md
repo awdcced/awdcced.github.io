@@ -85,4 +85,4 @@ JavaScript复习
 ## 常用属性、函数
 
 # 项目
-## 贪吃蛇
+## [贪吃蛇](awdcced.github.io/Snakes.html)
