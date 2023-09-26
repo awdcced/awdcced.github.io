@@ -11,13 +11,13 @@
 2. 内嵌
 ```
 <script>
-代码
+code
 </script>
 ```
 
 3. 行内
 ```
-<button onclick="alert('hello')">按钮</button>
+<button onclick="alert('hello')">button</button>
 ```
 
 # 基本语法
@@ -46,6 +46,7 @@
 ## 数据类型转换
 1. 自动转换
 ![markdown简单语法表](img/markdown简单语法表.png)
+
 2. 强制转换
 	1. 转换为数字
 	Number(val)、NaN、parseInt/parseFloat、val*1
