@@ -42,16 +42,11 @@ code
 2. 初始化
 3. 使用表达式
 4. 输出结果到html
-	1. alert()
-	2. console.log()
-	3. document.write() //dw
-
-|  表头   | 表头  |
+|  code   | effect  |
 |  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
+| alert()  | 弹出框 |
+| console.log()  | 控制台输出 |
+| document.write()  | 在页面中打印 |
 
 ### 数据类型
 1. 数值型
