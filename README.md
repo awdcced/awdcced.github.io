@@ -44,7 +44,7 @@ code
 4. 输出结果到html
 
 |  code   | effect  |
-|  ----  | ----  |
+|  :----:  | :----:  |
 | alert()  | 弹出框 |
 | console.log()  | 控制台输出 |
 | document.write()  | 在页面中打印 |
