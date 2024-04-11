@@ -1,366 +1,429 @@
-<!DOCTYPE html><html><head>
-      <title>Me and my code for those things</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:///c:\Users\q2823\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.7.10\crossnote\dependencies\katex\katex.min.css">
-      
-      
-      
-      
-      
-      <style>
-      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>随机填空题生成器</title>
+		<style>
+			.correct {
+				color: green;
+			}
 
-      </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export" html-show-sidebar-toc="true">
-    
-    
-      <div class="crossnote markdown-preview  ">
-      <div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>▶︎</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p><font size="10" color="#F28D8D">Me and my code for those things</font></p>
-<h1 class="crossnote-header" id="javascript">JavaScript</h1>
+			.incorrect {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
 
-<h2 class="crossnote-header" id="%E7%AE%80%E4%BB%8B">简介</h2>
+		<h1>题目生成器</h1>
 
-<h3 class="crossnote-header" id="%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D">语言介绍</h3>
+		<p id="question"></p>
+		<textarea id="answer-input" placeholder="输入你的答案" rows="4" cols="50"></textarea>
+		<button onclick="checkAnswer()">查看答案</button>
+		<button onclick="goToNextQuestion()">下一题</button>
+		<p id="result" class="result"></p>
 
-<h4 class="crossnote-header" id="%E4%BB%80%E4%B9%88%E6%98%AFjs%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8">什么是js？什么时候用？为什么要用？</h4>
+		<script>
+			const questionsWithAnswers = [{
+					question: "人民当家作主是社会主义民主政治的本质特征，请简述加强人民当家作主制度保障的相关内容。",
+					answer: "加强人民当家作主制度保障，就是坚持和完善人民代表大会制度，确保人民通过人民代表大会行使国家权力，保证人民当家作主。"
+				},
+				{
+					question: "简述‘四个全面’战略布局的内容。",
+					answer: "‘四个全面’战略布局包括：全面建成小康社会、全面深化改革、全面依法治国、全面从严治党。"
+				},
+				{
+					question: "请简述我国当前社会的主要矛盾。",
+					answer: "我国当前社会的主要矛盾是人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。"
+				},
+				{
+					question: "解释‘四个意识’的含义。",
+					answer: "‘四个意识’是指政治意识、大局意识、核心意识、看齐意识，是增强党性修养、严明政治纪律、强化责任担当、推动事业发展，确保党和国家兴旺发达、长治久安的重要遵循。"
+				},
+				{
+					question: "解释‘四个自信’的含义。",
+					answer: "‘四个自信’即中国特色社会主义道路自信、理论自信、制度自信、文化自信，由习近平总书记在庆祝中国共产党成立95周年大会上提出，是对党的十八大提出的中国特色社会主义‘三个自信’的创造性拓展和完善。"
+				},
+				{
+					question: "请解释‘两个维护’的含义。",
+					answer: "‘两个维护’是指坚决维护习近平总书记党中央的核心、全党的核心地位，坚决维护党中央权威和集中统一领导。"
+				},
+				{
+					question: "简述毛泽东思想包含的主要内容。",
+					answer: "毛泽东思想主要包含实事求是、群众路线、独立自主三个方面的内容。"
+				},
+				{
+					question: "简述新时代中国特色社会主义思想的意义。",
+					answer: "新时代中国特色社会主义思想是对马克思列宁主义、毛泽东思想、邓小平理论、‘三个代表’重要思想、科学发展观的继承和发展，是马克思主义中国化最新成果，是党和人民实践经验和集体智慧的结晶，是中国特色社会主义理论体系的重要组成部分，是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南，必须长期坚持并不断发展。"
+				},
+				{
+					question: "解释‘两个一百年’奋斗目标的具体内容。",
+					answer: "‘两个一百年’奋斗目标是指：到中国共产党成立100年时（2021年）全面建成小康社会，和到新中国成立100年时（2049年）建成富强民主文明和谐美丽的社会主义现代化强国。"
+				},
+				{
+					question: "请列举和平共处五项原则的内容。",
+					answer: "和平共处五项原则包括：互相尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处。"
+				},
+				{
+					question: "简述‘十三五’时期的发展理念。",
+					answer: "‘十三五’时期的发展理念包括创新、协调、绿色、开放、共享。"
+				},
+				{
+					question: "请简述我国的基本经济制度。",
+					answer: "我国的基本经济制度是以公有制为主体，多种所有制经济共同发展。"
+				},
+				{
+					question: "邓小平在哪次大会上明确提出‘建设有中国特色的社会主义’？",
+					answer: "邓小平在中共十二大上明确提出‘建设有中国特色的社会主义’。"
+				},
+				{
+					question: "党的根本宗旨是什么？",
+					answer: "党的根本宗旨是全心全意为人民服务。"
+				},
+				{
+					question: "中国共产党第一次全国代表大会于哪一年在上海召开？",
+					answer: "1921年"
+				},
+				{
+					question: "中国共产党以哪些理论为行动指南？",
+					answer: "马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想"
+				},
+				{
+					question: "中国共产党代表什么的发展要求、前进方向和根本利益？",
+					answer: "中国先进生产力的发展要求，中国先进文化的前进方向，中国最广大人民群众的根本利益"
+				},
+				{
+					question: "党的最高领导机关是什么？",
+					answer: "党的全国代表大会和它所产生的中央委员会"
+				}, {
+					question: "坚持党的群众路线是党的宗旨的集中体现。群众路线是党的根本工作路线。请简述群众路线的含义。",
+					answer: "群众路线就是一切为了群众，一切依靠群众，从群众中来，到群众中去，把党的正确主张变为群众的自觉行动。"
+				},
+				{
+					question: "党在任何时候都把群众利益放在第一位，同群众同甘共苦，保持最密切的联系，坚持权为民所用、情为民所系、利为民所谋。请解释‘权为民所用、情为民所系、利为民所谋’的含义。",
+					answer: "‘权为民所用’意味着党的权力来自于人民，必须用于为人民服务；‘情为民所系’指的是党的情感必须与人民紧密相连，关心人民的疾苦和需求；‘利为民所谋’则是要求党始终将人民的利益放在首位，为人民谋福利。"
+				},
+				{
+					question: "全面依法治国是中国特色社会主义的本质要求和重要保障。请简述全面依法治国的意义。",
+					answer: "全面依法治国是发展社会主义市场经济的客观需要，是社会文明进步的显著标志，是国家长治久安的必要保障。依法治国，建设社会主义法治国家，是人民当家作主根本保证。"
+				},
+				{
+					question: "我国共产党面临的三大历史任务是什么？",
+					answer: "我国共产党面临的三大历史任务是推进现代化建设、完成祖国统一、维护世界和平与促进共同发展。"
+				},
+				{
+					question: "党的建设必须坚决实现哪五项基本要求？",
+					answer: "党的建设必须坚决实现以下五项基本要求：一是坚持党的基本路线；二是坚持解放思想，实事求是，与时俱进，求真务实；三是坚持全心全意为人民服务；四是坚持民主集中制；五是坚持从严管党治党。"
+				},
+				{
+					question: "全面提高党的建设科学化水平，全党要增强哪些能力？",
+					answer: "全面提高党的建设科学化水平，全党要增强紧迫感和责任感，增强自我净化、自我完善、自我革新、自我提高能力，确保党始终成为中国特色社会主义事业的坚强领导核心。"
+				},
+				{
+					question: "中国共产党领导人民构建社会主义和谐社会，请简述社会主义和谐社会的特征。",
+					answer: "中国共产党领导人民构建的社会主义和谐社会是民主法治、公平正义、诚信友爱、充满活力、安定有序、人与自然和谐相处的社会。"
+				},
+				{
+					question: "党章总纲指出，民主集中制既是党的根本组织原则，也是群众路线在党的生活中的运用。请简述民主集中制的含义。",
+					answer: "民主集中制是民主基础上的集中和集中指导下的民主相结合的制度，是党的根本组织制度和领导制度，也是马克思主义政党区别于其他政党的重要标志。"
+				},
+				{
+					question: "党员与一般群众的根本区别是什么？",
+					answer: "党员与一般群众的根本区别在于党员具有高度的共产主义觉悟，愿意为共产主义事业奋斗终身，随时准备为党和人民牺牲一切，甚至生命。"
+				},
+				{
+					question: "我们党的最大政治优势是什么？党执政后的最大危险是什么？",
+					answer: "我们党的最大政治优势是密切联系群众，党执政后的最大危险是脱离群众。"
+				},
+				{
+					question: "中国共产党人的初心和使命是什么？",
+					answer: "中国共产党人的初心和使命，就是为中国人民谋幸福，为中华民族谋复兴。"
+				},
+				{
+					question: "中国共产党员的性质是什么？他们的奋斗目标是什么？",
+					answer: "中国共产党员是中国工人阶级的有共产主义觉悟的先锋战士，他们必须全心全意为人民服务，不惜牺牲个人的一切，为实现共产主义奋斗终身。"
+				},
+				{
+					question: "请简述中共七大和党的十八大、十九大在确立党的指导思想方面的历史贡献。",
+					answer: "中共七大正式确立毛泽东思想为全党的指导思想，为党在抗日战争和解放战争中取得胜利奠定了思想基础。党的十八大把科学发展观确立为党的指导思想，写入党章，对坚持和发展中国特色社会主义具有重大现实意义和深远历史意义。党的十九大确立了习近平新时代中国特色社会主义思想的历史地位，为新时代坚持和发展中国特色社会主义提供了行动指南。"
+				},
+				{
+					question: "正确的入党动机是什么？申请入党需要几名正式党员作介绍人？",
+					answer: "正确的入党动机是为人民服务，为实现共产主义而奋斗。申请入党需要有两名正式党员作介绍人。"
+				},
+				{
+					question: "中国共产党党徽党旗的图案是什么？请描述。",
+					answer: "中国共产党党徽为镰刀和锤头组成的图案，党旗为旗面缀有金黄色党徽图案的红旗。"
+				}, {
+					question: "预备党员的义务和权利与正式党员有何不同？",
+					answer: "预备党员的义务同正式党员一样。预备党员的权利，除了没有表决权、选举权和被选举权以外，也同正式党员一样。"
+				},
+				{
+					question: "如何理解党员义务与党员权利的相互关系？",
+					answer: "党员义务与党员权利的相互关系是辩证统一的。党员义务是党员权利的基础和前提，党员履行义务是行使权利的具体体现，也是保证党的利益和事业得以实现的基础条件。同时，党员权利又是党员义务的重要保障，党员行使权利的过程也是为党和人民事业作贡献的过程。因此，党员既要认真履行义务，也要正确行使权利，做到权利和义务的有机统一。"
+				},
+				{
+					question: "预备党员的预备期是多久？党员的党龄从何时算起？",
+					answer: "预备党员的预备期为一年，从支部大会通过他为预备党员之日算起。党员的党龄从转为正式党员之日算起。"
+				},
+				{
+					question: "发展党员的基本原则是什么？党员在受到不公正待遇时可以采取哪些措施？",
+					answer: "发展党员必须坚持入党自愿和个别吸收的原则。党员在受到不公正待遇时，有权向党的上级组织直至中央提出请求、申诉和控告，并要求有关组织给以负责的答复。"
+				},
+				{
+					question: "党的纪律包括哪些？组织纪律的核心是什么？",
+					answer: "党的纪律包括政治纪律、组织纪律、廉洁纪律、群众纪律、工作纪律、生活纪律。组织纪律的核心是自觉地贯彻执行民主集中制的原则。"
+				},
+				{
+					question: "《中国共产党发展党员工作细则》第二条对发展党员工作有什么要求？",
+					answer: "《中国共产党发展党员工作细则》第二条指出，党的基层组织应当把吸收具有马克思主义信仰、共产主义觉悟和中国特色社会主义信念，自觉践行社会主义核心价值观的先进分子入党，作为一项经常性重要工作。"
+				}, {
+					question: "先进性是马克思主义政党的生命所系、力量所在，主要靠什么来体现？",
+					answer: "先进性是马克思主义政党的生命所系、力量所在，主要靠千千万万高素质党员来体现。"
+				},
+				{
+					question: "请简述‘四风’的内容。",
+					answer: "‘四风’的内容是形式主义、官僚主义、享乐主义和奢靡之风。"
+				},
+				{
+					question: "党章要求尊崇党章，严格执行新形势下党内政治生活若干准则，党内政治生活应具有哪些特性？",
+					answer: "党章要求尊崇党章，严格执行新形势下党内政治生活若干准则，党内政治生活应具有政治性、时代性、原则性、战斗性。"
+				},
+				{
+					question: "共产党员必须与哪类群众亲密合作，共同为建设中国特色社会主义而奋斗？",
+					answer: "共产党员必须与党外群众亲密合作，共同为建设中国特色社会主义而奋斗。"
+				},
+				{
+					question: "‘两学一做’学习教育指的是什么？",
+					answer: "‘两学一做’学习教育指的是学党章党规、学系列讲话，做合格党员。"
+				},
+				{
+					question: "党员如果没有正当理由，连续多长时间不参加党的组织生活，或者不缴纳党费，或者不做党所分配的工作，就被认为是自行脱党？",
+					answer: "党员如果没有正当理由，连续六个月不参加党的组织生活，或者不缴纳党费，或者不做党所分配的工作，就被认为是自行脱党。"
+				},
+				{
+					question: "党的纪律主要特征有哪些？",
+					answer: "党的纪律主要特征是客观性、严肃性、自觉性、民主性。"
+				},
+				{
+					question: "党的纪律处分有哪几种？其中留党察看最长不超过多长时间？",
+					answer: "党的纪律处分有五种：警告、严重警告、撤销党内职务、留党察看、开除党籍。留党察看最长不超过两年。"
+				},
+				{
+					question: "坚持惩前毖后、治病救人，执纪必严、违纪必究的原则，目的是什么？",
+					answer: "坚持惩前毖后、治病救人，执纪必严、违纪必究，抓早抓小、防微杜渐，按照错误性质和情节轻重，给以批评教育直至纪律处分。让‘红红脸、出出汗’成为常态。"
+				},
+				{
+					question: "请简述党面临的四大危险。",
+					answer: "党面临的四大危险是精神懈怠危险、能力不足危险、脱离群众危险、消极腐败危险。"
+				},
+				{
+					question: "党的三大作风是什么？",
+					answer: "党的三大作风是理论联系实际、密切联系群众、批评与自我批评。"
+				},
+				{
+					question: "党员受到警告、严重警告处分后，多长时间内不得在党内提升职务和向党外组织推荐任高于原职职务的党外职务？",
+					answer: "党员受到警告、严重警告一年内，不得在党内提升职务和向党外组织推荐任高于原职职务的党外职务。"
+				},
+				{
+					question: "中国共产党的领导是中国特色社会主义的什么特征？",
+					answer: "中国共产党的领导是中国特色社会主义最本质的特征。"
+				},
+				{
+					question: "中国共产党的最高理想和最终目标是什么？近年来中华民族最伟大的梦想是什么？",
+					answer: "中国共产党的最高理想和最终目标是实现共产主义，近年来中华民族最伟大的梦想是实现中华民族伟大复兴。"
+				},
+				{
+					question: "爱国主义通常表现为哪些情感？",
+					answer: "爱国主义通常表现为具有认同感、归属感、尊严感、荣誉感。"
+				},
+				{
+					question: "近代中国面临的两大历史任务是什么？",
+					answer: "近代中国面临的两大历史任务是民族独立、人民解放和国家富强、人民富裕。"
+				},
+				{
+					question: "民主集中制是什么？其‘四个服从’是什么？",
+					answer: "民主集中制是党的根本组织制度和领导制度。民主集中制‘四个服从’是个人服从组织，少数服从多数，下级服从上级，全党服从中央。"
+				},
+				{
+					question: "坚持社会主义道路、坚持人民民主专政、坚持中国共产党的领导、坚持马克思列宁主义、毛泽东思想这四项基本原则，是我们的什么？",
+					answer: "坚持社会主义道路、坚持人民民主专政、坚持中国共产党的领导、坚持马克思列宁主义、毛泽东思想这四项基本原则，是我们的立国之本。"
+				},
+				{
+					question: "中国共产党的党徽党旗的图案是什么？请描述。",
+					answer: "中国共产党党徽为镰刀和锤头组成的图案，党旗为旗面缀有金黄色党徽图案的红旗。"
+				},
+				{
+					question: "中国共产党党旗的旗面颜色是什么？",
+					answer: "中国共产党党旗的旗面为红色，旗面缀有金黄色党徽图案的红旗。红色象征革命，黄色的锤子、镰刀代表工人和农民的劳动工具，象征着中国共产党是中国工人阶级的先锋队，代表着工人阶级和广大人民群众的根本利益。"
+				},
+				{
+					question: "什么是党的群众路线？",
+					answer: "党的群众路线就是一切为了群众，一切依靠群众，从群众中来，到群众中去，把党的正确主张变为群众的自觉行动。"
+				},
+				{
+					question: "党的群众路线的核心内容和基本要求是什么？",
+					answer: "党的群众路线的核心内容是“一切为了群众，一切依靠群众”。基本要求是“从群众中来，到群众中去”。"
+				},
+				{
+					question: "党的根本宗旨是什么？",
+					answer: "党的根本宗旨是全心全意为人民服务。"
+				},
+				{
+					question: "什么是‘三会一课’制度？",
+					answer: "‘三会一课’制度是指定期召开支部党员大会、支部委员会、党小组会，按时上好党课。"
+				},
+				{
+					question: "党的组织生活的基本制度包括哪些？",
+					answer: "党的组织生活的基本制度主要包括‘三会一课’、组织生活会、谈心谈话、民主评议党员以及请示报告等制度。"
+				},
+				{
+					question: "什么是‘两个一百年’奋斗目标？",
+					answer: "‘两个一百年’奋斗目标是指在中国共产党成立一百年时全面建成小康社会，在新中国成立一百年时建成富强民主文明和谐美丽的社会主义现代化强国。"
+				},
+				{
+					question: "‘四个自信’是指什么？",
+					answer: "‘四个自信’是指中国特色社会主义道路自信、理论自信、制度自信、文化自信，由习近平总书记在庆祝中国共产党成立95周年大会上提出，是对党的十八大提出的中国特色社会主义‘三个自信’的创造性拓展和完善。"
+				},
+				{
+					question: "‘五位一体’总体布局是指什么？",
+					answer: "‘五位一体’总体布局是指经济建设、政治建设、文化建设、社会建设和生态文明建设五位一体，全面推进。"
+				},
+				{
+					question: "‘四个全面’战略布局是指什么？",
+					answer: "‘四个全面’战略布局是指全面建成小康社会、全面深化改革、全面依法治国、全面从严治党。"
+				}, {
+					question: "中国共产党的执政理念是什么？",
+					answer: "中国共产党的执政理念是立党为公，执政为民。"
+				},
+				{
+					question: "请简述'四个伟大'的含义。",
+					answer: "四个伟大指：伟大斗争、伟大工程、伟大事业、伟大梦想，紧密联系、相互贯通、相互作用，其中起决定性作用的是党的建设新的伟大工程。"
+				},
+				{
+					question: "请列出社会主义核心价值观的内容。",
+					answer: "社会主义核心价值观包括富强、民主、文明、和谐（国家层面），自由、平等、公正、法治（社会层面），爱国、敬业、诚信、友善（公民个人层面）。"
+				},
+				{
+					question: "请写出您所在学院的校训。",
+					answer: "学院的校训是：励志修德勤学创新。"
+				},
+				{
+					question: "请说出武汉科技大学城市学院、武汉外语外事职业学院现任党委书记是谁？",
+					answer: "武汉科技大学城市学院、武汉外语外事职业学院现任党委书记是王军。"
+				},
+				{
+					question: "请简述志愿服务精神的内容。",
+					answer: "志愿服务精神的内容是：奉献、友爱、互助、进步。"
+				},
+				{
+					question: "请说出武汉精神的内容。",
+					answer: "武汉精神的内容是：敢为人先，追求卓越。"
+				},
+				{
+					question: "请说明《中华人民共和国宪法》关于国家主席、副主席任期的规定。",
+					answer: "根据现行《中华人民共和国宪法》规定，中华人民共和国主席、副主席每届任期同全国人民代表大会每届任期相同。"
+				},
+				{
+					question: "请简述国家安全的重要性。",
+					answer: "国家安全是安邦定国的重要基石，维护国家安全是全国各族人民根本利益所在。"
+				},
+				{
+					question: "请简述统筹国内国际两个大局的原则。",
+					answer: "必须统筹国内国际两个大局，始终不渝走和平发展道路、奉行互利共赢的开放战略。"
+				},
+				{
+					question: "请解释人类社会的发展动力。",
+					answer: "人类社会的发展动力是社会内部生产力和生产关系矛盾运动的结果。"
+				},
+				{
+					question: "请简述改革开放以来我们取得成绩和进步的根本原因。",
+					answer: "改革开放以来我们取得一切成绩和进步的根本原因是开辟了中国特色社会主义道路，形成了中国特色社会主义理论体系，确立了中国特色社会主义制度，发展了中国特色社会主义文化。"
+				},
+				{
+					question: "请简述发展的重要性以及创新在发展中的作用。",
+					answer: "发展是我们党执政兴国的第一要务，创新是引领发展的第一动力，是建设现代化经济体系的战略支撑。"
+				},
+				{
+					question: "请解释'一带一路'的含义，并说明其建设重点。",
+					answer: "'一带一路'是指丝绸之路经济带和21世纪海上丝绸之路。建设重点是坚持引进来与走出去并重，加强创新能力开放合作，形成海陆内外联动、东西双向互济的开放格局。"
+				},
+				{
+					question: "请说出'一带一路'建设秉持的原则。",
+					answer: "'一带一路'建设秉持的原则是：共商、共建、共享。"
+				},
+				{
+					question: "请简述习近平总书记在庆祝改革开放40周年大会上的讲话中关于创新和人才的理念。",
+					answer: "习近平总书记在庆祝改革开放40周年大会上的讲话中指出，我们要坚持创新是第一动力，人才是第一资源的理念。"
+				},
+				{
+					question: "请简述共青团的性质和作用。",
+					answer: "共青团是中国共产党领导的先进青年的群众组织，是具有政治性，先进性，群众性的组织，是青年在实践中学习中国特色社会主义和共产主义的学校，是中国共产党的助手和后备军。"
+				},
+				{
+					question: "请解释科学发展观的精神实质和内涵。",
+					answer: "科学发展观的精神实质是解放思想、实事求是、与时俱进、求真务实；其内涵是：科学发展观，第一要义是发展，核心是以人为本，基本要求是全面协调可持续，根本方法是统筹兼顾。"
+				},
+				{
+					question: "请解释绿色发展的含义。",
+					answer: "绿色发展，就其要义来讲，是要解决好人与自然和谐共生问题。人类发展活动必须尊重自然、顺应自然、保护自然，否则就会遭到大自然的报复，这个规律谁也无法抗拒。"
+				},
+				{
+					question: "请简述我国脱贫攻坚的目标。",
+					answer: "我国脱贫攻坚的目标是确保到2020年我国现行标准下农村贫困人口实现脱贫，贫困县全部摘帽，解决区域性整体贫困，做到脱真贫、真脱贫。"
+				},
+				{
+					question: "中国共产党第十九次全国人民代表大会的主题是什么?",
+					answer: "不忘初心，牢记使命，高举中国特色社会主义伟大旗帜，决胜全面建成小康社会，夺取新时代中国特色社会主义胜利，为实现中华民族伟大复兴的中国梦不懈奋斗。"
+				},
+				{
+					question: "改革开放以来我们取得一切成绩和进步的根本原因是什么?",
+					answer: "开辟了中国特色社会主义道路、形成了中国特色社会主义理论体系、确立了中国特色社会主义制度、发展了中国特色社会主义文化。"
+				},
+				// ... 添加更多问题和答案  
+			];
 
-<h3 class="crossnote-header" id="%E4%BD%BF%E7%94%A8%E5%88%B0html">使用到html</h3>
+			// 随机排序题目数组  
+			questionsWithAnswers.sort(() => Math.random() - 0.5);
 
-<h4 class="crossnote-header" id="%E5%A6%82%E4%BD%95%E5%B0%86js%E5%BA%94%E7%94%A8%E5%88%B0html%E9%A1%B5%E9%9D%A2">如何将js应用到html页面</h4>
+			let currentQuestionIndex = 0;
+			const totalQuestions = questionsWithAnswers.length;
 
-<ol>
-<li>外部引用</li>
-</ol>
-<pre data-role="codeBlock" data-info="" class="language-text text"><code>&lt;script src="js/calculator.js"&gt;&lt;/script&gt;
-</code></pre><ol start="2">
-<li>内嵌</li>
-</ol>
-<pre data-role="codeBlock" data-info="" class="language-text text"><code>&lt;script&gt;
-code
-&lt;/script&gt;
-</code></pre><ol start="3">
-<li>行内</li>
-</ol>
-<pre data-role="codeBlock" data-info="" class="language-text text"><code>&lt;button onclick="alert('hello')"&gt;button&lt;/button&gt;
-</code></pre><h2 class="crossnote-header" id="%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">基本语法</h2>
+			function showQuestion() {
+				if (currentQuestionIndex < totalQuestions) {
+					const currentQuestion = questionsWithAnswers[currentQuestionIndex];
+					document.getElementById('question').textContent = "问题: " + currentQuestion.question;
+					document.getElementById('answer-input').value = ""; // 清空输入框  
+				} else {
+					document.getElementById('question').textContent = "所有题目已经回答完毕！";
+					document.getElementById('answer-input').disabled = true; // 禁用输入框  
+					document.getElementById('check-answer').disabled = true; // 禁用检查答案按钮  
+					document.getElementById('result').textContent = "恭喜你完成了所有题目！";
+				}
+			}
 
-<h3 class="crossnote-header" id="%E5%8F%98%E9%87%8F">变量</h3>
-
-<ol>
-<li>声明变量 var let*</li>
-<li>初始化</li>
-<li>使用表达式</li>
-<li>输出结果到html
-<ol>
-<li>alert()</li>
-<li>console.log()</li>
-<li>document.write() //dw</li>
-</ol>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody>
-</table>
-<h3 class="crossnote-header" id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">数据类型</h3>
-
-<ol>
-<li>数值型</li>
-<li>字符型 ES6字符串使用*</li>
-<li>对象</li>
-<li>布尔，null，未定义，……</li>
-</ol>
-<h3 class="crossnote-header" id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">数据类型转换</h3>
-
-<ol>
-<li>
-<p>自动转换<br>
-<img src="img/JavaScript%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A1%A8.png" alt="JavaScript类型转换表"></p>
-</li>
-<li>
-<p>强制转换</p>
-<ol>
-<li>转换为数字<br>
-Number(val)、NaN、parseInt/parseFloat、val*1</li>
-<li>字符串转换<br>
-String(val)、val.toString()、""+val</li>
-</ol>
-</li>
-</ol>
-<h2 class="crossnote-header" id="%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6">流程控制</h2>
-
-<h3 class="crossnote-header" id="%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84">分支结构</h3>
-
-<ol>
-<li>if</li>
-<li>switch</li>
-</ol>
-<h3 class="crossnote-header" id="%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84">循环结构</h3>
-
-<ol>
-<li>while/do-while*</li>
-<li>for循环
-<ol>
-<li>for-i</li>
-<li>for-in</li>
-<li>for-of</li>
-<li>each*</li>
-</ol>
-</li>
-</ol>
-<h2 class="crossnote-header" id="%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95">函数/方法</h2>
-
-<h3 class="crossnote-header" id="%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0">自定义函数</h3>
-
-<ol>
-<li>基本语法 声明关键字</li>
-<li>参数列表</li>
-<li>返回值</li>
-</ol>
-<h3 class="crossnote-header" id="%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0">系统函数</h3>
-
-<h4 class="crossnote-header" id="%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0">数学函数</h4>
-
-<h4 class="crossnote-header" id="%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0">字符函数</h4>
-
-<h4 class="crossnote-header" id="%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0">时间日期函数</h4>
-
-<h4 class="crossnote-header" id="eval">eval()*</h4>
-
-<h2 class="crossnote-header" id="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">面向对象*</h2>
-
-<h2 class="crossnote-header" id="bom%E5%92%8Cdom">BOM和DOM</h2>
-
-<h3 class="crossnote-header" id="bom%E6%A6%82%E5%BF%B5">BOM概念</h3>
-
-<h3 class="crossnote-header" id="%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7-%E5%87%BD%E6%95%B0">常用属性、函数</h3>
-
-<h3 class="crossnote-header" id="dom%E6%A6%82%E5%BF%B5">DOM概念</h3>
-
-<h3 class="crossnote-header" id="%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7-%E5%87%BD%E6%95%B0-1">常用属性、函数</h3>
-
-<h2 class="crossnote-header" id="%E9%A1%B9%E7%9B%AE">项目</h2>
-
-<h3 class="crossnote-header" id="%E8%B4%AA%E5%90%83%E8%9B%87httpsawdccedgithubiosnakeshtml"><a href="https://awdcced.github.io/Snakes.html">贪吃蛇</a></h3>
+			function checkAnswer() {
+				const userAnswer = document.getElementById('answer-input').value;
+				const currentQuestion = questionsWithAnswers[currentQuestionIndex];
+				const resultElement = document.getElementById('result');
 
 
-      </div>
-      <div class="md-sidebar-toc">
-<div class="md-toc">
-<details style="padding:0;;padding-left:0px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#javascript" class="md-toc-link"><p>JavaScript</p>
-</a>
-          </summary>
-        <div>
-          <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#简介" class="md-toc-link"><p>简介</p>
-</a>
-          </summary>
-        <div>
-          <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#语言介绍" class="md-toc-link"><p>语言介绍</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#什么是js什么时候用为什么要用" class="md-toc-link">
-            <p>什么是js？什么时候用？为什么要用？</p>
+				resultElement.textContent = "正确答案是：" + currentQuestion.answer;
+				resultElement.className = "incorrect";
 
-          </a></div>
-        </div>
-      </details>
-    <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#使用到html" class="md-toc-link"><p>使用到html</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#如何将js应用到html页面" class="md-toc-link">
-            <p>如何将js应用到html页面</p>
+				showQuestion(); // 更新界面，可能是下一题或者完成信息  
+			}
 
-          </a></div>
-        </div>
-      </details>
-    
-        </div>
-      </details>
-    <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#基本语法" class="md-toc-link"><p>基本语法</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#变量" class="md-toc-link">
-            <p>变量</p>
+			function goToNextQuestion() {
+				currentQuestionIndex++; // 跳转到下一题  
+				showQuestion(); // 更新界面显示下一题  
+			}
 
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#数据类型" class="md-toc-link">
-            <p>数据类型</p>
+			// 页面加载时随机排序题目并显示第一题  
+			questionsWithAnswers.sort(() => Math.random() - 0.5);
+			showQuestion();
+		</script>
 
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#数据类型转换" class="md-toc-link">
-            <p>数据类型转换</p>
-
-          </a></div>
-        </div>
-      </details>
-    <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#流程控制" class="md-toc-link"><p>流程控制</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#分支结构" class="md-toc-link">
-            <p>分支结构</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#循环结构" class="md-toc-link">
-            <p>循环结构</p>
-
-          </a></div>
-        </div>
-      </details>
-    <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#函数方法" class="md-toc-link"><p>函数/方法</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#自定义函数" class="md-toc-link">
-            <p>自定义函数</p>
-
-          </a></div><details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#系统函数" class="md-toc-link"><p>系统函数</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#数学函数" class="md-toc-link">
-            <p>数学函数</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#字符函数" class="md-toc-link">
-            <p>字符函数</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#时间日期函数" class="md-toc-link">
-            <p>时间日期函数</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#eval" class="md-toc-link">
-            <p>eval()*</p>
-
-          </a></div>
-        </div>
-      </details>
-    
-        </div>
-      </details>
-    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#面向对象" class="md-toc-link">
-            <p>面向对象*</p>
-
-          </a></div><details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#bom和dom" class="md-toc-link"><p>BOM和DOM</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#bom概念" class="md-toc-link">
-            <p>BOM概念</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#常用属性-函数" class="md-toc-link">
-            <p>常用属性、函数</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#dom概念" class="md-toc-link">
-            <p>DOM概念</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#常用属性-函数-1" class="md-toc-link">
-            <p>常用属性、函数</p>
-
-          </a></div>
-        </div>
-      </details>
-    <details style="padding:0;;padding-left:24px;" open="">
-        <summary class="md-toc-link-wrapper">
-          <a href="#项目" class="md-toc-link"><p>项目</p>
-</a>
-          </summary>
-        <div>
-          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#贪吃蛇httpsawdccedgithubiosnakeshtml" class="md-toc-link">
-            </a><p><a href="#贪吃蛇httpsawdccedgithubiosnakeshtml" class="md-toc-link"></a><a href="https://awdcced.github.io/Snakes.html">贪吃蛇</a></p>
-
-          </div>
-        </div>
-      </details>
-    
-        </div>
-      </details>
-    
-</div>
-</div>
-      <a id="sidebar-toc-btn">≡</a>
-    
-    
-    
-    
-    
-    
-<script>
-
-var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
-sidebarTOCBtn.addEventListener('click', function(event) {
-  event.stopPropagation()
-  if (document.body.hasAttribute('html-show-sidebar-toc')) {
-    document.body.removeAttribute('html-show-sidebar-toc')
-  } else {
-    document.body.setAttribute('html-show-sidebar-toc', true)
-  }
-})
-</script>
-      
-  
-    </body></html>
+	</body>
+</html>
